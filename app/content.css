@@ -1,0 +1,158 @@
+/* ==========================================
+   這是注入到網頁中的 CSS 樣式表。
+   針對包含了四個按鈕的控制面板進行排版設計 (精簡版)
+   ========================================== */
+
+#custom-audio-controller {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #ffffff; /* Mondrian White */
+  padding: 12px;
+  border-radius: 4px; /* Sharper Mondrian corners */
+  box-shadow: 6px 6px 0px rgba(0,0,0,0.2); /* Solid shadow for retro feel */
+  border: 2px solid #000000; /* Thick black Mondrian border */
+  font-family: 'Inter', sans-serif;
+  min-width: 160px;
+}
+
+/* --- 按鈕群組 --- */
+.btn-group {
+  display: flex;
+  flex-direction: column; /* Vertical alignment for minimalist feel */
+  gap: 8px;
+}
+
+.custom-btn {
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 800; /* Extra bold */
+  color: white;
+  border: 2px solid #000000; /* Thick black borders for buttons */
+  border-radius: 2px;
+  cursor: pointer;
+  transition: transform 0.1s ease, filter 0.1s ease;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  text-transform: uppercase; /* Uppercase for minimalism */
+}
+
+.custom-btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  filter: brightness(1.1);
+}
+
+.custom-btn:active:not(:disabled) {
+  transform: translate(1px, 1px);
+}
+
+.custom-btn svg {
+  stroke: currentColor;
+}
+
+/* ================================
+   播放按鈕：蒙德里安藍
+   ================================ */
+.play-btn-source {
+  background-color: #4285f4;
+}
+
+/* ================================
+   播放按鈕：蒙德里安黃
+   ================================ */
+.play-btn-target {
+  background-color: #fbbc05;
+  color: #000000; /* Black text on yellow */
+}
+
+/* ================================
+   停止按鈕：蒙德里安紅
+   ================================ */
+.stop-btn {
+  background-color: #ea4335;
+}
+
+/* 當按鈕被設定為 disabled 時的樣式 */
+.custom-btn:disabled {
+  background-color: #e0e0e0 !important;
+  color: #999999 !important;
+  border-color: #cccccc !important;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ================================
+   1.5 高階功能樣式 (拖曳)
+   ================================ */
+
+/* 拖曳把手 */
+.panel-drag-handle {
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #70757a;
+  cursor: grab;
+  padding: 4px 0 8px 0;
+  margin-top: -4px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #f1f3f4;
+  user-select: none;
+}
+
+.panel-drag-handle:active {
+  cursor: grabbing;
+}
+
+/* --- 邊緣吸附提示 (Snap Indicators) --- */
+#custom-audio-controller::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  background-color: #4285f4; /* Google Blue */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  box-shadow: 0 0 8px rgba(66, 133, 244, 0.6); /* 發光效果 */
+}
+
+/* 左側吸附 */
+#custom-audio-controller.snap-left::after {
+  top: 0; left: -2px; bottom: 0; 
+  width: 4px; 
+  border-radius: 8px 0 0 8px; 
+  opacity: 1;
+}
+
+/* 右側吸附 */
+#custom-audio-controller.snap-right::after {
+  top: 0; right: -2px; bottom: 0; 
+  width: 4px; 
+  border-radius: 0 8px 8px 0; 
+  opacity: 1;
+}
+
+/* 上方吸附 */
+#custom-audio-controller.snap-top::after {
+  top: -2px; left: 0; right: 0; 
+  height: 4px; 
+  border-radius: 8px 8px 0 0; 
+  opacity: 1;
+}
+
+/* 下方吸附 */
+#custom-audio-controller.snap-bottom::after {
+  bottom: -2px; left: 0; right: 0; 
+  height: 4px; 
+  border-radius: 0 0 8px 8px; 
+  opacity: 1;
+}
