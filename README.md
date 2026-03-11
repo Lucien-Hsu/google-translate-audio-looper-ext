@@ -4,7 +4,7 @@
 
 A minimalist, Mondrian-style Chrome extension designed for language learners. This tool adds an "audio looping" panel to Google Translate, allowing you to focus on repetition and pronunciation of both source and translated text.
 
-![Project Preview](https://via.placeholder.com/800x450.png?text=Mondrian+Audio+Looper+Preview)
+![Project Preview](ext_snapshot.png)
 
 ## ✨ Features
 
