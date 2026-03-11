@@ -1,5 +1,7 @@
 # Google Translate Audio Looper (Chrome Extension) 🎨🎧
 
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-blue?logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/google-translate-audio-lo/cgjpahgdgkogojeiakjinihplpbpkhoa)
+
 A minimalist, Mondrian-style Chrome extension designed for language learners. This tool adds an "audio looping" panel to Google Translate, allowing you to focus on repetition and pronunciation of both source and translated text.
 
 ![Project Preview](https://via.placeholder.com/800x450.png?text=Mondrian+Audio+Looper+Preview)
@@ -28,15 +30,20 @@ A minimalist, Mondrian-style Chrome extension designed for language learners. Th
 └── README.md           # You are here
 ```
 
-## 🛠 Installation (Developer Mode)
+## 🛠 Installation
 
+### 🌐 Chrome Web Store (Recommended)
+You can install the official version from the [Chrome Web Store](https://chromewebstore.google.com/detail/google-translate-audio-lo/cgjpahgdgkogojeiakjinihplpbpkhoa).
+
+### 🛠 Developer Mode (Manual)
 1.  **Clone the repository**: `git clone https://github.com/your-username/google-translate-audio-looper-ext.git`
 2.  **Open Chrome Extensions**: Navigate to `chrome://extensions/`.
 3.  **Enable Developer Mode**: Toggle the switch in the upper right corner.
 4.  **Load Unpacked**: Click "Load unpacked" and select the **`app`** folder within this project.
 
-## 🚀 Publication status
-This extension is production-ready. For detailed steps on how to publish this to the Chrome Web Store, please see the internal [Publishing Guide](file:///Users/lucien/.gemini/antigravity/brain/e1f3e855-94fa-4899-833e-ce65227d4627/publishing_guide.md).
+## 🚀 Publication Status
+This extension is published and available on the [Chrome Web Store](https://chromewebstore.google.com/detail/google-translate-audio-lo/cgjpahgdgkogojeiakjinihplpbpkhoa).
 
 ## 📜 License
 This project is open-source and available under the MIT License.
+
